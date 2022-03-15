@@ -13,8 +13,12 @@ public class CheckingAccount{
         this.accNum = accNum;
         this.bal = bal;
     }
-    public void deposit(double amt)
+    public void deposit(double amt) throws Exception
     {
+        if(amt<0)
+        {
+            throw new Exception("cannot deposit negative amount!");
+        }
         this.bal += amt;
     }
 
